@@ -37,14 +37,20 @@ TSS = np.sum((b - y_mean)**2)      # Total Sum of Squares
 R_squared = 1 - (SSE / TSS)        # Koefisien Determinasi R^2
 
 # =====================================================================
-# PRINT OUT 
+# PRINT OUT (VERSI RAPI UNTUK LAPORAN TANIA)
 # =====================================================================
-print("=== HASIL PRINT UNTUK LAPORAN TANIA ===\n")
-print(f"--- NOMOR 2.1 ---")
-print("Data X:", np.round(x, 2))
-print("Data Y:", np.round(y, 2))
+print("=== HASIL PRINT OUT ===\n")
+print(f"--- HASIL NOMOR 2.1 ---")
+print("===================================================================")
+print("                  TABEL DATA DATASET MINIPROJECT 3                 ")
+print("=================================================================== ")
+print(" No.      |    Koordinat X (Independen)    |    Koordinat Y (Target)")
+print("-------------------------------------------------------------------")
+for i in range(m):
+    print(f" Titik {i+1:02d} |{x[i]:>30.2f}      |{y[i]:>23.2f}")
+print("===================================================================")
 
-print(f"\n--- NOMOR 2.2 ---")
+print(f"\n--- HASIL NOMOR 2.2 ---")
 print("Matriks A (Ukuran 20x2):\n", np.round(A, 2))
 print("\nVektor b (Ukuran 20x1):\n", np.round(b, 2))
 print("\nMatriks Normal A^T * A:\n", np.round(ATA, 2))
@@ -53,7 +59,7 @@ print(f"\nNilai beta_0 (Intersep) didapatkan = {beta_0_hat:.4f}")
 print(f"Nilai beta_1 (Slope) didapatkan    = {beta_1_hat:.4f}")
 print(f"Persamaan Garis Regresi: y = {beta_0_hat:.2f} + {beta_1_hat:.2f}x")
 
-print(f"\n--- NOMOR 2.3 ---")
+print(f"\n--- HASIL NOMOR 2.3 ---")
 print(f"Sum of Squared Errors (SSE)      = {SSE:.4f}")
 print(f"Total Sum of Squares (TSS)       = {TSS:.4f}")
 print(f"Koefisien Determinasi (R^2)      = {R_squared:.4f} ({R_squared*100:.2f}%)")
